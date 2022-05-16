@@ -1,6 +1,6 @@
 # This settings can be used to create org level settings
 
-#repository: 
+repository: 
   # This is the settings that need to be applied to all repositories in the org 
   # See https://developer.github.com/v3/repos/#edit for all available settings for a repository  
   # A short description of the repository that will show up on GitHub
@@ -12,7 +12,7 @@
   # Keep this as true for most cases
   # A lot of the policies below cannot be implemented on bare repos
   # Pass true to create an initial commit with empty README.
-  #auto_init: true
+  auto_init: true
     
   # A list of topics to set on the repository
   #topics: 
@@ -32,17 +32,17 @@
   #visibility: private
   
   # Either `true` to enable issues for this repository, `false` to disable them.
-  #has_issues: true
+  has_issues: true
   
   # Either `true` to enable projects for this repository, or `false` to disable them.
   # If projects are disabled for the organization, passing `true` will cause an API error.
-  #has_projects: true
+  has_projects: true
   
   # Either `true` to enable the wiki for this repository, `false` to disable it.
-  #has_wiki: true
+  has_wiki: true
   
   # The default branch for this repository.
-  #default_branch: main
+  default_branch: main
   
   # Desired language or platform [.gitignore template](https://github.com/github/gitignore) 
   # to apply. Use the name of the template without the extension. 
@@ -57,15 +57,15 @@
   
   # Either `true` to allow squash-merging pull requests, or `false` to prevent
   # squash-merging.
-  #allow_squash_merge: true
+  allow_squash_merge: false
   
   # Either `true` to allow merging pull requests with a merge commit, or `false`
   # to prevent merging pull requests with merge commits.
-  #allow_merge_commit: true
+  allow_merge_commit: true
   
   # Either `true` to allow rebase-merging pull requests, or `false` to prevent
   # rebase-merging.
-  #allow_rebase_merge: true
+  allow_rebase_merge: false
   
   # Either `true` to allow auto-merge on pull requests, 
   # or `false` to disallow auto-merge.
@@ -138,37 +138,37 @@
 # You can exclude a list of repos for this collaborator and all repos except these repos would have this collaborator
 
 
-#branches:
+branches:
   # If the name of the branch value is specified as `default`, then the app will create a branch protection rule to apply against the default branch in the repo
-#  - name: default
+  - name: default
     # https://developer.github.com/v3/repos/branches/#update-branch-protection
     # Branch Protection settings. Set to null to disable
-#    protection:
+    protection:
       # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
-#      required_pull_request_reviews:
+      required_pull_request_reviews:
         # The number of approvals required. (1-6)
-#        required_approving_review_count: 1
+        required_approving_review_count: 3
         # Dismiss approved reviews automatically when a new commit is pushed.
-#        dismiss_stale_reviews: true
+        dismiss_stale_reviews: true
         # Blocks merge until code owners have reviewed.
 #        require_code_owner_reviews: true
         # Specify which users and teams can dismiss pull request reviews. Pass an empty dismissal_restrictions object to disable. User and team dismissal_restrictions are only available for organization-owned repositories. Omit this parameter for personal repositories.
-#        dismissal_restrictions:
-#          users: []
-#          teams: []
+        dismissal_restrictions:
+          users: []
+          teams: []
       # Required. Require status checks to pass before merging. Set to null to disable
-#      required_status_checks:
+      required_status_checks:
         # Required. Require branches to be up to date before merging.
-#        strict: true
+        strict: true
         # Required. The list of status checks to require in order to merge into this branch
-#        contexts: []
+        contexts: []
       # Required. Enforce all configured restrictions for administrators. Set to true to enforce required status checks for repository administrators. Set to null to disable.
-#      enforce_admins: true
+      enforce_admins: true
       # Required. Restrict who can push to this branch. Team and user restrictions are only available for organization-owned repositories. Set to null to disable.
-#      restrictions:
-#        apps: []
-#        users: []
-#        teams: []
+      restrictions:
+        apps: []
+        users: []
+        teams: []
         
 #validator:
   #pattern: '[a-zA-Z0-9_-]+_[a-zA-Z0-9_-]+.*' 
