@@ -57,7 +57,7 @@ repository:
   
   # Either `true` to allow squash-merging pull requests, or `false` to prevent
   # squash-merging.
-  allow_squash_merge: false
+  allow_squash_merge: true
   
   # Either `true` to allow merging pull requests with a merge commit, or `false`
   # to prevent merging pull requests with merge commits.
@@ -65,7 +65,7 @@ repository:
   
   # Either `true` to allow rebase-merging pull requests, or `false` to prevent
   # rebase-merging.
-  allow_rebase_merge: false
+  allow_rebase_merge: true
   
   # Either `true` to allow auto-merge on pull requests, 
   # or `false` to disallow auto-merge.
